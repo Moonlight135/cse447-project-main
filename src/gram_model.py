@@ -118,7 +118,7 @@ class gramModel():
   
 def processTestInput(ctoi, text, block_size):
   if len(text) < block_size:
-    arr = [ctoi['.'] * (block_size - len(text))]
+    arr = [ctoi['.']] * (block_size - len(text))
     arr.extend([ctoi[ch] for ch in text])
     return arr
 
