@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import os
-import string
 import random
 import torch
 import json
@@ -85,7 +84,6 @@ class MyModel:
 
     def run_pred(self, data):
         preds = []
-        all_chars = string.ascii_letters
         for inp in data:
             probMod2 = self.mod2.get_prob(processTestInput(self.ctoi, inp, block_size=2))
             probMod3 = self.mod3.get_prob(processTestInput(self.ctoi, inp, block_size=3))

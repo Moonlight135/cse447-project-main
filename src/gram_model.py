@@ -1,7 +1,5 @@
-import numpy as np
 import torch
 import torch.nn.functional as F
-import random
 
 ## Inputs
   ## dataset - of the form where it will have a column labeled 'text' which is a string of text
@@ -114,7 +112,7 @@ class gramModel():
 ## needs to be given both a starting text to predict from
 ## and the index -> char dictionary
   def __call__(self, startChar, itoc) -> None:
-    return self.forward(startChar)
+    return self.forward(startChar, itoc)
   
 def processTestInput(ctoi, text, block_size):
   if len(text) < block_size:
