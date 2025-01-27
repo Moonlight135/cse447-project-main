@@ -10,7 +10,7 @@ mkdir -p submit
 printf "Eliana Dietrich,eliana1\nJay Bhateja,jbhateja\nAndy Ruan,yhruan22" > submit/team.txt
 
 # train model
-python src/myprogram.py train --work_dir work
+# python src/myprogram.py train --work_dir work
 
 # make predictions on example data submit it in pred.txt
 python src/myprogram.py test --work_dir work --test_data example/input.txt --test_output submit/pred.txt
